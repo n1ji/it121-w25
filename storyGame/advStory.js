@@ -126,5 +126,23 @@ function enemyRoom() {
     }
 }
 
+// Get the audio element and button
+const audio = document.getElementById("backgroundAudio");
+const audioButton = document.getElementById("audioButton");
+let isPlaying = false; // Audio starts off
+
+audio.volume = 0.3;
+// Toggle audio on button click
+audioButton.addEventListener("click", () => {
+    if (isPlaying) {
+        audio.pause();
+        audioButton.textContent = "🔊 Turn On Music";
+    } else {
+        audio.play();
+        audioButton.textContent = "🔇 Turn Off Music";
+    }
+    isPlaying = !isPlaying; // Toggle the state
+});
+
 // Start the game when the button is clicked
 document.getElementById("startGame").addEventListener("click", startGame);
