@@ -4,11 +4,11 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    font-family: "Bubblegum Sans", serif;
+    font-family: "Barriecito", serif;
     text-align: center;
     background: #303e44;
     animation: colorchange 10s infinite;
-    cursor: url('../images/defaultCursor.png'), auto;
+    cursor: url('../assets/defaultCursor.png'), auto;
 }
 
 #info {
@@ -28,8 +28,8 @@ p {
 
 a {
     text-decoration: none;
-    color: rgb(216, 216, 216);
-    cursor: url('../images/clickCursor.png'), auto;
+    color: rgb(215, 184, 255);
+    cursor: url('../assets/clickCursor.png'), auto;
 }
 
 button {
@@ -40,7 +40,7 @@ button {
     font-size: 1rem;
     text-align: center;
     font-weight: bold;
-    cursor: url('../images/clickCursor.png'), pointer;
+    cursor: url('../assets/clickCursor.png'), pointer;
     background-color: #ff9040;
     color: white;
     border: none;
@@ -50,6 +50,15 @@ button {
 
 button:hover {
     background-color: #ffbb5b;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    padding: 10px 0;
+    font-size: 1.2rem;
 }
 
 @keyframes colorchange {
