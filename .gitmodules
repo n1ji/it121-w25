@@ -1,0 +1,6 @@
+[submodule "it121-storyGame"]
+	path = it121-storyGame
+	url = https://github.com/n1ji/it121-storyGame.git
+[submodule "it121-inventoryManager"]
+	path = it121-inventoryManager
+	url = https://github.com/n1ji/it121-inventoryManager.git
