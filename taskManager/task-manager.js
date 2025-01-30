@@ -5,7 +5,7 @@ function displayMenu() {
     return prompt(`Inventory Manager\n1. View all items\n2. Add a new item\n3. Remove an item\n4. Exit\nChoose an option:`);
 }
 
-function viewItems() {
+function viewNewItems() {
     if (inventory.length === 0) {
         outputDiv.innerHTML = "No items in inventory.";
     } else {
@@ -23,7 +23,7 @@ function addItem() {
     if (newItem) {
         inventory.push(newItem);
         alert(`Added "${newItem}" to inventory.`);
-        viewItems(); // Update the displayed list after adding an item
+        viewNewItems(); // Update the displayed list after adding an item
     } else {
         alert("Invalid input. Item not added.");
     }
@@ -41,7 +41,7 @@ function removeItem() {
     if (index >= 0 && index < inventory.length) {
         let removedItem = inventory.splice(index, 1);
         alert(`Removed "${removedItem}" from inventory.`);
-        viewItems(); // Update the displayed list after removing an item
+        viewNewItems(); // Update the displayed list after removing an item
     } else {
         alert("Invalid item number.");
     }
@@ -53,7 +53,7 @@ function main() {
         let choice = displayMenu();
         switch (choice) {
             case "1":
-                viewItems();
+                viewNewItems();
                 break;
             case "2":
                 addItem();
@@ -74,4 +74,4 @@ function main() {
 document.getElementById('openMenu').addEventListener('click', main);
 
 // Initial display of items
-viewItems();
+viewNewItems();

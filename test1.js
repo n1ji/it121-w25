@@ -1,7 +1,7 @@
-function number(){
-    const evenodd = 29;
-    const result = evenodd % 2 === 0 ? 'even' : 'odd';
-    console.log(result);
-}
+let numbers = [1, 5, 10, 20];
+let removedNumber = numbers.pop();
+console.log(removedNumber);
 
-number();
+const mixed = ["hello", 10, true];
+const removedItem = mixed.shift();
+console.log(removedItem);
