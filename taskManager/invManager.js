@@ -1,17 +1,13 @@
 let inventory = ["Focal Radiance", "HD800", "HD600"];
 const outputDiv = document.getElementById('output');
 
-// Initial display of items
-if (inventory.length === 0) {
-    outputDiv.innerHTML = "No items in inventory.";
-} else {
-    let itemsList = "<h2>Inventory Items:</h2><ol>";
-    for (let i = 0; i < inventory.length; i++) {
-        itemsList += `<li>${inventory[i]}</li>`;
-    }
-    itemsList += "</ol>";
-    outputDiv.innerHTML = itemsList;
+
+let itemsList = "<h2>Inventory Items:</h2><ol>";
+for (let i = 0; i < inventory.length; i++) {
+    itemsList += `<li>${inventory[i]}</li>`;
 }
+itemsList += "</ol>";
+outputDiv.innerHTML = itemsList;
 
 document.getElementById('openMenu').addEventListener('click', () => {
     let running = true;
