@@ -1,4 +1,5 @@
-const fruits = ["apple", "banana", "cherry"];
-for (let fruit of fruits) {
-  console.log(fruit);
+person = {name:"John", age:30, city:"NYC"}
+
+for(let key in person){
+    console.log(person[key])
 }

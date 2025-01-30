@@ -1,23 +1,20 @@
-let inventory = [];
+let inventory = ["Focal Radiance", "HD800", "HD600"];
+const outputDiv = document.getElementById('output');
 
 function displayMenu() {
-    return prompt(`Inventory Manager
-1. View all items
-2. Add a new item
-3. Remove an item
-4. Exit
-Choose an option:`);
+    return prompt(`Inventory Manager\n1. View all items\n2. Add a new item\n3. Remove an item\n4. Exit\nChoose an option:`);
 }
 
 function viewItems() {
     if (inventory.length === 0) {
-        alert("No items in inventory.");
+        outputDiv.innerHTML = "No items in inventory.";
     } else {
-        let itemsList = "Inventory Items:\n";
+        let itemsList = "<h2>Inventory Items:</h2><ol>";
         for (let i = 0; i < inventory.length; i++) {
-            itemsList += `${i + 1}. ${inventory[i]}\n`;
+            itemsList += `<li>${inventory[i]}</li>`;
         }
-        alert(itemsList);
+        itemsList += "</ol>";
+        outputDiv.innerHTML = itemsList;
     }
 }
 
@@ -26,6 +23,7 @@ function addItem() {
     if (newItem) {
         inventory.push(newItem);
         alert(`Added "${newItem}" to inventory.`);
+        viewItems(); // Update the displayed list after adding an item
     } else {
         alert("Invalid input. Item not added.");
     }
@@ -43,6 +41,7 @@ function removeItem() {
     if (index >= 0 && index < inventory.length) {
         let removedItem = inventory.splice(index, 1);
         alert(`Removed "${removedItem}" from inventory.`);
+        viewItems(); // Update the displayed list after removing an item
     } else {
         alert("Invalid item number.");
     }
@@ -72,4 +71,7 @@ function main() {
     }
 }
 
-main();
+document.getElementById('openMenu').addEventListener('click', main);
+
+// Initial display of items
+viewItems();
