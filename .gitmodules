@@ -4,3 +4,6 @@
 [submodule "it121-inventoryManager"]
 	path = it121-inventoryManager
 	url = https://github.com/n1ji/it121-inventoryManager.git
+[submodule "it121-weatherApp"]
+	path = it121-weatherApp
+	url = https://github.com/n1ji/it121-weatherApp.git
