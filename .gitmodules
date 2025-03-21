@@ -7,3 +7,6 @@
 [submodule "it121-weatherApp"]
 	path = it121-weatherApp
 	url = https://github.com/n1ji/it121-weatherApp.git
+[submodule "it121-fetchDisplay"]
+	path = it121-fetchDisplay
+	url = https://github.com/n1ji/it121-fetchDisplay.git
